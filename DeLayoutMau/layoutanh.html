@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+            margin-bottom: 30px;
+        }
+        
+        .menu {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            position: relative;
+            justify-content: space-around;
+        }
+        
+        .menu li {
+            list-style-type: none;
+            background-color: gray;
+            line-height: 50px;
+            text-align: center;
+            width: 11.2%;
+            border-right: 1px solid white;
+        }
+        
+        .menu li a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .menu li:hover {
+            background-color: red;
+        }
+        
+        .menu li:hover a {
+            color: white;
+        }
+        
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            margin-left: 80px;
+        }
+        
+        .submenu li {
+            width: 200px;
+            background-color: white;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+            background-color: white;
+        }
+        
+        .menu li:hover .submenu li {
+            background-color: white;
+        }
+        
+        .menu li:hover .submenu a {
+            color: black;
+        }
+        
+        section {
+            width: 100%;
+            display: flex;
+        }
+        
+        .container1 {
+            width: 20%;
+        }
+        
+        .content1 {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .container2 {
+            width: 80%;
+            margin-left: 40px;
+            display: flex;
+        }
+        
+        .container2-content1 {
+            width: 25%;
+        }
+        
+        .container2 {
+            margin-top: 50px;
+        }
+        
+        footer {
+            width: 100%;
+            height: 50px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            background-color: black;
+            margin-top: 30px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">ĐIỆN THOẠI</a></li>
+            <li><a href="#">TABLE</a></li>
+            <li><a href="#">PHỤ KIỆN </a></li>
+            <li><a href="#">ĐỒNG HỒ</a></li>
+            <li><a href="#">ÂM THANH</a>
+                <ul class="submenu">
+                    <li><a href="#">Loa</a></li>
+                    <li><a href="#">Loa Vi Tính</a></li>
+                    <li><a href="#">Loa Bluetooth</a></li>
+                    <li><a href="#">Loa Kéo</a></li>
+                </ul>
+            </li>
+            <li><a href="#">LAPTOP</a></li>
+            <li><a href="#">SIM THẺ</a></li>
+            <li><a href="#">HÀNG CŨ</a></li>
+            <li><a href="#">TRẢ GÓP</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="container1">
+            <div class="content1">
+                <div style="width:50%">
+                    <img src="hinhgalaxy.jpg" alt="#" width="80%" style="margin-left: 10%;">
+                    <p style="text-align: center;">Galaxy note10</p>
+                </div>
+                <div style="width:50%">
+                    <img src="hinhgalaxy.jpg" alt="#" width="80%" style="margin-left: 10%;">
+                    <p style="text-align: center;">Galaxy note10</p>
+                </div>
+            </div>
+
+            <div class="content1">
+                <div style="width:50%">
+                    <img src="hinhgalaxy.jpg" alt="#" width="80%" style="margin-left: 10%;">
+                    <p style="text-align: center;">Galaxy note10</p>
+                </div>
+                <div style="width:50%">
+                    <img src="hinhgalaxy.jpg" alt="#" width="80%" style="margin-left: 10%;">
+                    <p style="text-align: center;">Galaxy note10</p>
+                </div>
+            </div>
+
+            <div class="content1">
+                <div style="width:50%">
+                    <img src="hinhgalaxy.jpg" alt="#" width="80%" style="margin-left: 10%;">
+                    <p style="text-align: center;">Galaxy note10</p>
+                </div>
+                <div style="width:50%">
+                    <img src="hinhgalaxy.jpg" alt="#" width="80%" style="margin-left: 10%;">
+                    <p style="text-align: center;">Galaxy note10</p>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="container2-content1">
+                <img src="mauden.jpg" alt="#" style="width:80%">
+                <br> <br>
+                <p>Tai nghe over</p>
+                <p>1,990,000 <u>đ</u></p>
+                <del>3,000,000 <u>đ</u></del>
+            </div>
+
+            <div class="container2-content1">
+                <img src="mauden.jpg" alt="#" style="width:80%">
+                <br> <br>
+                <p>Tai nghe over</p>
+                <p>1,990,000 <u>đ</u></p>
+                <del>3,000,000 <u>đ</u></del>
+            </div>
+            <div class="container2-content1">
+                <img src="mauden.jpg" alt="#" style="width:80%">
+                <br> <br>
+                <p>Tai nghe over</p>
+                <p>1,990,000 <u>đ</u></p>
+                <del>3,000,000 <u>đ</u></del>
+            </div>
+            <div class="container2-content1">
+                <img src="mauden.jpg" alt="#" style="width:80%">
+                <br> <br>
+                <p>Tai nghe over</p>
+                <p>1,990,000 <u>đ</u></p>
+                <del>3,000,000 <u>đ</u></del>
+            </div>
+        </div>
+    </section>
+    <footer>Bản quyền thầy Nghiễm</footer>
+</body>
+
+</html>

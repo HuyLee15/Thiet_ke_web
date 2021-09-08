@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            width: 100%;
+            height: 80px;
+            background-image: url(https://i0.wp.com/s1.uphinh.org/2021/09/05/pic.png);
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            display: flex;
+        }
+        
+        .nav {
+            width: 25%;
+            margin-right: 20px;
+        }
+        
+        .banner {
+            background-color: #336699;
+            color: white;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        
+        .menu {
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+        
+        .menu li {
+            list-style-type: none;
+            background-color: white;
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            border-bottom: 1px dotted black;
+        }
+        
+        .menu li a {
+            color: black;
+            text-decoration: none;
+            margin-left: 50px;
+        }
+        
+        .menu li:hover a {
+            color: #336699;
+        }
+        
+        .submenu {
+            margin-left: 100%;
+            margin-top: -50px;
+            width: 300px;
+            display: none;
+        }
+        
+        .submenu li a {
+            color: black !important;
+        }
+        
+        .submenu>li {
+            background-color: white;
+        }
+        
+        .submenu li:hover a {
+            color: black;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+        }
+        
+        .section {
+            border: 2px solid blue;
+            width: 75%;
+            background-color: white;
+        }
+        
+        .container-content {
+            display: flex;
+            font-size: 16px !important;
+            color: black;
+        }
+        
+        .content {
+            width: 25%;
+            border: 1px solid lightgray;
+        }
+        
+        img {
+            width: 200px;
+            height: 400px;
+            margin-left: 13%;
+            margin-top: 5%;
+        }
+        
+        p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .p1:hover {
+            color: red;
+        }
+        
+        .red {
+            color: red;
+        }
+        
+        .content div {
+            display: flex;
+        }
+        
+        .icon {
+            background-color: red;
+            padding: 0px 5px;
+            color: white;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <div class="nav">
+            <div class="banner">
+                <h2>ALL CATEGORY</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">LAPTOP</a>
+                    <ul class="submenu">
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">SHOCKS</a></li>
+                        <li><a href="#">CLOTH</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SHOCKS</a></li>
+                <li><a href="#">CLOTH</a></li>
+                <li><a href="#">COMSMETIC</a></li>
+                <li><a href="#">DESKTOP</a></li>
+                <li><a href="#">KIDS</a></li>
+                <li><a href="#">MP3 PLayer</a></li>
+                <li><a href="#">Perfume</a></li>
+                <li><a href="#">+ MORE</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <div class="container-content">
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Vòng đeo tay GALAXY FIT E hàng chính hãng</p>
+                    <div>
+                        <p class="red">590.000<u>đ</u></p>
+                        <p class="icon">- 40%</p>
+                    </div>
+                    <p style="color: gray;"><del>900.000đ</del></p>
+                </div>
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Ốp lưng led cover galaxy S10+ hàng chính hãng</p>
+                    <div>
+                        <p class="red">690.000<u>đ</u></p>
+                        <p class="icon">- 42%</p>
+                    </div>
+                    <p style="color: gray;"><del>1.100.000đ</del></p>
+                </div>
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Ốp lưng Alcantara Galaxy S8+ chính hãng giá shock</p>
+                    <div>
+                        <p class="red">249.000<u>đ</u></p>
+                        <p class="icon">- 72%</p>
+                    </div>
+                    <p style="color: gray;"><del>800.000đ</del></p>
+                </div>
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Balo laptop Targus TSB 162AP chính hãng hàng thanh lý</p>
+                    <div>
+                        <p class="red">299.000<u>đ</u></p>
+                        <p class="icon">- 97%</p>
+                    </div>
+                    <p style="color: gray;"><del>8.000.000đ</del></p>
+                </div>
+            </div>
+            <div class="container-content">
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Đồng hồ Galaxy watch Active chính hãng SSVN</p>
+                    <div>
+                        <p class="red">4.890.000<u>đ</u></p>
+                        <p class="icon">- 11%</p>
+                    </div>
+                    <p style="color: gray;"><del>5.400.000đ</del></p>
+                </div>
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Bao da clear view Galaxy S9+ chính hãng</p>
+                    <div>
+                        <p class="red">590.000<u>đ</u></p>
+                        <p class="icon">- 40%</p>
+                    </div>
+                    <p style="color: gray;"><del>900.000đ</del></p>
+                </div>
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Bao da Led view Galaxy S9+ chính hãng</p>
+                    <div>
+                        <p class="red">850.000<u>đ</u></p>
+                        <p class="icon">- 14%</p>
+                    </div>
+                    <p style="color: gray;"><del>900.000đ</del></p>
+                </div>
+                <div class="content">
+                    <img src="https://news.mogi.vn/wp-content/uploads/2019/05/mua-ban-nha-dat-ha-noi-anh-2.jpg" alt="#">
+                    <p class="p1">Tai nghe bluetooth Samsung U Flex chính hãng</p>
+                    <div>
+                        <p class="red">1.390.000<u>đ</u></p>
+                        <p class="icon">- 13%</p>
+                    </div>
+                    <p style="color: gray;"><del>1.500.000đ</del></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

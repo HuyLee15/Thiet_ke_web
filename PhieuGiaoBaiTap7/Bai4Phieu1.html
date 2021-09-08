@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function tinhcong() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById("ketqua").value = a + b;
+    }
+
+    function tinhtru() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById("ketqua").value = a - b;
+    }
+
+    function tinhnhan() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById("ketqua").value = a * b;
+    }
+
+    function tinhchia() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        if (b == 0) alert("so thu 2 phai lon hon 0");
+        else document.getElementById("ketqua").value = a / b;
+    }
+
+    function tinhmu() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById("ketqua").value = Math.pow(a, b);
+    }
+</script>
+
+<body>
+    <table>
+        <tr>
+            <td>So thu nhat </td>
+            <td><input type="text" id="number1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="+" onclick="tinhcong()"> <input type="button" value="-" onclick="tinhtru()"> <input type="button" value="*" onclick="tinhnhan()">
+                <input type="button" value="/" onclick="tinhchia()"> <input type="button" value="^" onclick="tinhmu()"> </td>
+        </tr>
+        <tr>
+            <td>So thu hai</td>
+            <td><input type="text" id="number2"></td>
+        </tr>
+        <tr>
+            <td>Ket qua </td>
+            <td><input type="text" id="ketqua"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

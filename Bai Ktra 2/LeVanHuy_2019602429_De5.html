@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: blue;
+            width: 100%;
+            text-align: center;
+            height: 50px;
+        }
+        
+        header>p {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        
+        nav {
+            width: 25%;
+        }
+        
+        .menu {
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+        
+        .menu li {
+            list-style-type: none;
+            background-color: rgb(29, 162, 97);
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            border-bottom: 0.5px solid white;
+        }
+        
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .menu li:hover {
+            background-color: red;
+        }
+        
+        .menu li:hover a {
+            color: yellow;
+        }
+        
+        .submenu {
+            position: absolute;
+            top: 41px;
+            margin-left: 100%;
+            width: 300px;
+            display: none;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+        }
+        
+        section {
+            width: 75%;
+        }
+        
+        form {
+            width: 80%;
+            height: 170px;
+            background-color: blue;
+            border-radius: 15px 15px;
+            margin-left: 13%;
+            margin-top: 20px;
+        }
+        
+        h2 {
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+        footer {
+            background-color: blue;
+            width: 100%;
+            text-align: center;
+            height: 50px;
+        }
+        
+        footer>p {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        
+        .content {
+            padding-left: 15%;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>BÀI KIỂM TRA SỐ 2</p>
+    </header>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Thiết kế web</a>
+                    <ul class="submenu">
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu CSS</a></li>
+                        <li><a href="#">Tài liệu Javascript</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lập trình C#</a></li>
+                <li><a href="#">Lập trình Web</a></li>
+                <li><a href="#">Lập trình hướng đối tượng</a></li>
+                <li><a href="#">Cơ sở dữ liệu</a></li>
+            </ul>
+        </nav>
+        <section>
+            <form action="">
+                <h2>ĐẾM SỐ TỪ TRONG CÂU </h2> <br>
+                <div class="content">
+                    <p style="padding-left: 8px;">Nhập một câu: <input type="text" id="str" value="Nhập một chuỗi" style="width:500px"></p> <br>
+                    <p>Số từ trong câu: <input type="text" id="kq" style="width:500px"></p> <br>
+                    <input type="button" value="Đếm" onclick="myFunction()" readonly style="margin-left:38%"></div>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>BẢN QUYỀN THUỘC VỀ TEST 2</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            let str = document.getElementById("str").value;
+            if (str == "") alert("Không được để trống ô nhập một câu");
+            str = str.replace(/\s+/g, ' ').trim();
+            str = str.split(" ");
+            let kq = str.length;
+            document.getElementById("kq").value = kq;
+        }
+    </script>
+</body>
+
+</html>

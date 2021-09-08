@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+            background-image: url();
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .header{
+            border: solid black 2px;
+            text-align: center;
+            height: 80px;
+            line-height:80px;
+            font-size: 35px;
+        }
+        .main-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 2%;
+            border: solid blue;
+            height: 60px;
+            line-height: 60px;
+            font-size: 25px;
+        }
+        .main-nav-item{
+            width: 20%;
+            
+        }
+        .sub-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 2%;
+            border: solid blue;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sub-nav-item:hover{
+            cursor: pointer;
+        }
+        .sub-nav .menu2nd{
+            position: relative;
+        }
+         .menu2nd-box{
+            position: absolute;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            border:  0.5px solid rgb(223, 168, 235);
+            color: grey;
+            background-color: white;
+            margin-left: -150%;
+            margin-top: 2%;
+            width: 250%;
+            display: none;
+        
+        }
+        .menu2nd:hover .menu2nd-box{
+            display: block;
+            cursor: pointer;
+        }
+        .content{
+            margin-top: 2%;
+            border: solid blue;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .content-nav-item{
+            border: solid 1.5px rgb(207, 96, 96);
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .list-goods{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 2%;
+            border: 1.5px solid rgb(223, 168, 235);
+            justify-content: space-around;
+        }
+        .list-goods-item{
+            text-align: center;
+            padding: 10px;
+            width: 22%;
+            border: 1.5px solid rgb(223, 168, 235);
+            margin-bottom: 1.5%;
+        }
+        .goods-img{
+            width: 100%;
+        }
+        .goods-img img{
+            width: 100%;
+        }
+        .goods-price .old-price{
+            color: gray;
+            text-decoration: line-through;
+        }
+        .goods-price .new-price{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Content
+        </div>
+        <div class="main-nav">
+            <div class="main-nav-item">
+                <p><i class="fas fa-bus"></i> <span></span></p>
+            </div>
+            <div class="main-nav-item">
+                <p><i class="fas fa-bus"></i> <span>Miễn phí vận chuyển</span></p>
+            </div>
+            <div class="main-nav-item">
+                <p><i class="fas fa-bus"></i> <span>Lắp đặt tận nhà</span></p>
+            </div>
+            <div class="main-nav-item">
+                <p><i class="fas fa-bus"></i> <span>Nhận hàng, nhận tiền</span></p>
+            </div>
+        </div>
+        <div class="sub-nav">
+            <p style="color: rgb(207, 96, 96);" class="sub-nav-item">Trang chủ</p>
+            <p class="sub-nav-item">Giới thiệu&#x025BE;</p>
+            <p class="sub-nav-item">
+            <div class="menu2nd">
+                <p>Sản phẩm&#x025BE;</p>
+                <div class="menu2nd-box">
+                    <p style=" border-bottom: 0.5px solid rgb(223, 168, 235);">Tat ca sam pham</p>
+                    <p style=" border-bottom: 0.5px solid rgb(223, 168, 235);"> Kem tay long</p>
+                    <p style=" border-bottom: 0.5px solid rgb(223, 168, 235);">Tinh chat triet long</p>
+                    <p style=" border-bottom: 0.5px solid rgb(223, 168, 235);">Combo san pham</p>
+                    <p style=" border-bottom: 0.5px solid rgb(223, 168, 235);">San pham moi</p>
+                    <p style=" border-bottom: 0.5px solid rgb(223, 168, 235);">San pham ban chay</p>
+                </div>
+            </div>
+            </p>
+            <p class="sub-nav-item">Tư vấn&#x025BE;</p>
+            <p class="sub-nav-item">Mua ở đâu&#x025BE;</p>
+            <p class="sub-nav-item">Tin tức là ưu đãi&#x025BE;</p>
+        </div>
+        <div class="content">
+            <div class="content-nav">
+                <div class="content-nav-item" style="color: white; background-color:  rgb(207, 96, 96);">
+                    Tat ca sam pham
+                </div>
+                <div class="content-nav-item">
+                    Kem tay long
+                </div>
+                <div class="content-nav-item">
+                    Tinh chat triet long
+                </div>
+                <div class="content-nav-item">
+                    Combo san pham
+                </div>
+                <div class="content-nav-item">
+                    San pham moi
+                </div>
+                <div class="content-nav-item">
+                    San pham ban chay
+                </div>
+            </div>
+            <div class="list-goods">
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+                <div class="list-goods-item">
+                    <div class="goods-img">
+                        <img src="https://i.pinimg.com/564x/04/fe/7c/04fe7cf8f920855a6174ea9e2d70250e.jpg" alt="">
+                    </div>
+                    <div class="goods-name">
+                        Dung dich sat khuan ca nhan New Tech 500ml
+                    </div>
+                    <div class="goods-price">
+                        <p><span class="old-price">99.000đ</span> <span class="new-price">60.000đ</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

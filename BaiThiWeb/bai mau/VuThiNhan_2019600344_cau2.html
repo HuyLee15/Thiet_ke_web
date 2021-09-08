@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            border: 1px solid black;
+            width: 500px;
+            margin: auto;
+        }
+        
+        table {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table cellspacing="5">
+                <tr>
+                    <td>Nhập chuỗi: </td>
+                    <td><input type="text" id="n" maxlength="255"></td>
+                </tr>
+                <tr>
+                    <td>Số từ có 4 ký tự: </td>
+                    <td><input type="text" id="kq"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input type="button" value="Tìm" onclick="tinh()"> <input type="reset" value="Hủy"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function dem(x) {
+            if (x.length == 4) return true;
+            else return false;
+        }
+
+        function tinh() {
+            var str = document.getElementById("n").value;
+            str = str.split(" ");
+            var temp = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (dem(str[i])) temp += 1;
+            }
+            document.getElementById('kq').value = temp;
+        }
+    </script>
+</body>
+
+</html>

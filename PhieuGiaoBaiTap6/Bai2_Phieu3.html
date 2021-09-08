@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ip {
+            width: 30px;
+        }
+    </style>
+</head>
+
+<script>
+    myFunction = () => {
+        var a = document.getElementById("a").value;
+        var b = Number(a);
+        alert(typeof(b));
+    }
+</script>
+
+<body>
+    <form action="">
+        <h3>JavaScript có thể kiểm soát form</h3>
+        <p>Hãy nhập vào hộp text(từ 1 đến 10):</p>
+        <input type="text" id="a"> <input type="submit" value="submit" onclick="myFunction()">
+        <p id="text"></p>
+    </form>
+</body>
+
+</html>

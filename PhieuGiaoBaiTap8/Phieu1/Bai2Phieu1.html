@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var a = [],
+            b = [],
+            tam;
+
+        alert(arr);
+        arr.sort();
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] !== tam) {
+                a.push(arr[i]);
+                b.push(1);
+            } else {
+                b[b.length - 1]++;
+            }
+            tam = arr[i];
+        }
+        var max = b[0],
+            vt;
+        for (var i = 1; i < b.length; i++) {
+            if (max < b[i]) max = b[i];
+        }
+        for (var i = 0; i < b.length; i++) {
+            if (max == b[i]) vt = i;
+        }
+        console.log(a, b);
+        alert("Gia tri co so lan xuat hien nhieu nhat trong mang la " + a[vt] + " va so lan xuat hien cua no la " + b[vt]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" align="center" width="200px" cellspacing="0" height="30px" style="color: red; background: pink; margin-top: 50px; line-height: 30px;">
+        <tr align="center">
+            <td>
+                <h3 id="text"></h3>
+                <input type="button" value="Yes" id="a" onmouseover="abc()" onmouseout="bca()" onclick="test()">&emsp;&emsp;
+                <input type="button" value="No" id="b" onclick="test()">
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        let name = window.prompt("Mời bạn nhập vào tên của mình:");;
+        let x = `${name} xinh hay xấu`;
+        document.getElementById("text").innerHTML = x;
+
+        function abc() {
+            document.getElementById("a").value = "No";
+            // alert("hello");
+        }
+
+        function bca() {
+            document.getElementById("a").value = "Yes";
+        }
+
+        function test() {
+            alert(`Đúng rồi ${name} xấu vl :))`);
+        }
+    </script>
+</body>
+
+</html>

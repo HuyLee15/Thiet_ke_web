@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            border: 1px solid black;
+            width: 500px;
+            margin: auto;
+        }
+        
+        table {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table cellspacing="5">
+                <tr>
+                    <td>Nhập số thứ nhất: </td>
+                    <td><input type="text" id="a" maxlength="1000"></td>
+                </tr>
+                <tr>
+                    <td>Nhập số thứ hai: </td>
+                    <td><input type="text" id="b" maxlength="1000"></td>
+                </tr>
+                <tr>
+                    <td>UCLN của hai số trên là: </td>
+                    <td><input type="text" id="kq"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input type="button" value="Tìm" onclick="tinh()">
+                        <input type="reset" value="Hủy bỏ"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function gcd(a, b) {
+            a = Math.abs(a);
+            b = Math.abs(b);
+            if (b > a) {
+                var temp = a;
+                a = b;
+                b = temp;
+            }
+            while (true) {
+                if (b == 0) return a;
+                a %= b;
+                if (a == 0) return b;
+                b %= a;
+            }
+        }
+
+        function tinh() {
+            var a = parseInt(document.getElementById('a').value);
+            var b = parseInt(document.getElementById('b').value);
+            var ucln = gcd(a, b);
+            document.getElementById('kq').value = ucln;
+        }
+    </script>
+</body>
+
+</html>

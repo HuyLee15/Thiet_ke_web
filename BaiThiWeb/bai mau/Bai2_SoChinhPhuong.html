@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            display: flex;
+            padding-top: 100px;
+        }
+        
+        .wrapper {
+            border: 1px solid black;
+            width: 600px;
+            height: 200px;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        .conten {
+            margin: 20px;
+        }
+        
+        .input {
+            margin: 10px;
+        }
+        
+        .output {
+            margin: 10px;
+        }
+        
+        p {
+            font-weight: bold;
+            float: left;
+            width: 260px;
+            text-align: left;
+        }
+        
+        button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">SỐ CHÍNH PHƯƠNG</h1>
+        <div class="conten">
+            <div class="input">
+                <p>Nhập n =</p>
+                <input type="text" id="n">
+            </div>
+            <div class="output">
+                <p>Tổng các số chính phương trong dãy: </p>
+                <input type="text" id="kq">
+            </div>
+            <div class="acction">
+                <button id="tinh" onclick="tinh()">Tính tổng</button>
+                <button id="huy" onclick="huy()">Huỷ bỏ</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Hoàng Nhật Minh
+        function chinhPhuong(x) {
+            var t = parseInt(Math.sqrt(x));
+            if (t * t == x) {
+                return true;
+            } else return false;
+        }
+
+        function tinh() {
+            const str = parseInt(document.getElementById('n').value);
+            let sum = 0;
+            for (let i = 1; i <= str; i++) {
+                if (chinhPhuong(i)) {
+                    sum += i;
+                }
+            }
+            console.log(sum);
+            document.getElementById("kq").value = sum;
+        }
+
+        function huy() {
+            document.getElementById('n').value = ""
+            document.getElementById("kq").value = "";
+        }
+    </script>
+</body>
+
+</html>

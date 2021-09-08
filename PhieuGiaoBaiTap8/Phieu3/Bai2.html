@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let st1 = window.prompt("nhap vao chuoi thu nhat");
+        let st2 = window.prompt("nhap vao chuoi thu 2");
+        st1 = st1.split("").sort();
+        st2 = st2.split("").sort();
+        if (st1.length == st2.length) {
+            let dem = 0;
+            for (let i = 0; i < st1.length; i++) {
+                if (st1[i] !== st2[i]) {
+                    dem += 1;
+                    break;
+                }
+            }
+            if (dem != 0) alert("khong the sap xep");
+            else alert("co the sap xep");
+        } else alert("khong the sap xep");
+    </script>
+</body>
+
+</html>

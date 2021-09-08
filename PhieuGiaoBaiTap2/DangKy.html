@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" style="color: #003300">
+        <table align="center" width="550px" border="1" cellspacing="0" cellpadding="3px" style="background-color: #999966;">
+            <caption>
+                <h2>Phiếu đăng ký tham gia chương trình khuyến mại</h2>
+            </caption>
+            <tr>
+                <td width="35%">
+                    <label for="hoten">Họ và tên</label>
+                </td>
+                <td width="65%">
+                    <input type="text" id="hoten" style="width:85%">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="diachi">Địa chỉ</label>
+                </td>
+                <td><input type="text" id="diachi" style="width: 65%"></td>
+            </tr>
+            <tr>
+                <td><label for="sdt">Điện thoại</label></td>
+                <td><input type="text" id="sdt" style="width: 50%"></td>
+            </tr>
+            <tr>
+                <td><label for="phai">Phái</label></td>
+                <td>
+                    <input type="radio" name="phai"> Nam
+                    <input type="radio" name="phai"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="job">Nghề nghiệp</label></td>
+                <td><select name="job" id="job">
+                    <option value="Giáo Viên">Giáo Viên</option>
+                    <option value="Công Nhân">Công Nhân</option>
+                    <option value="Bác Sĩ">Bác Sĩ</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="sp">Chọn sản phẩm tham gia</label></td>
+                <td>
+                    <input list="sp">
+                    <datalist id="sp">
+                            <option value="Kem đánh răng"></option>
+                            <option value="Bột giặt"></option>
+                            <option value="Dầu gội đầu"></option>
+                            <option value="Sữa tắm"></option>
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="songuoi">Số người dự đoán tham gia</label></td>
+                <td><input type="number" id="songuoi" style="width: 30%"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button">Đồng ý</button>
+                    <button type="reset">Xóa</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

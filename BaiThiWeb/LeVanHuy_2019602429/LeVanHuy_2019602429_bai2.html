@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            border: 1px solid black;
+            width: 500px;
+            margin: auto;
+        }
+        
+        table {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table cellspacing="5">
+                <tr>
+                    <td>Họ và tên: </td>
+                    <td><input type="text" id="n"></td>
+                </tr>
+                <tr>
+                    <td>Tên: </td>
+                    <td><input type="text" id="kq"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input type="button" value="Hiển thị" onclick="chuanhoa()"> <input type="reset" value="Hủy bỏ"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function chuanhoa() {
+            var chuoi = document.getElementById('n').value;
+            chuoi = chuoi.replace(/ +/g, ' ');
+            var arr = chuoi.split(' ');
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].length > 1) {
+                    arr[i] = arr[i].toLowerCase();
+                    arr1 = arr[i].split('');
+                    arr1[0] = arr1[0].toUpperCase();
+                    arr[i] = arr1.join('');
+                } else {
+                    arr[i] = arr[i].toUpperCase();
+                }
+            }
+            var x = arr.length;
+            document.getElementById('kq').value = arr[x - 1];
+
+        }
+    </script>
+</body>
+
+</html>

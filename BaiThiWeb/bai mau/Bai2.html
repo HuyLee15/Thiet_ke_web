@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            border: 1px solid black;
+            width: 500px;
+            margin: auto;
+        }
+        
+        table {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table cellspacing="5">
+                <tr>
+                    <td>Nhập n: </td>
+                    <td><input type="text" id="n"></td>
+                </tr>
+                <tr>
+                    <td>In ra n số nguyên tố đầu tiên: </td>
+                    <td><input type="text" id="kq"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input type="button" value="Tính tổng" onclick="tinh()"> <input type="reset" value="Hủy bỏ"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        nto = (n) => {
+            if (n == 0 || n == 1) return false;
+            for (let i = 2; i <= parseInt(Math.sqrt(n)); i++) {
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+        tinh = () => {
+            const n = parseInt(document.getElementById("n").value);
+            let tong = 0,
+                i = 0,
+                a = [];
+            for (let j = 0;; j++) {
+                if (nto(j)) {
+                    tong += j;
+                    a.push(j);
+                    i++;
+                }
+                if (i == n) break;
+            }
+            //in ra n số nguyên tố đầu tiên
+            document.getElementById("kq").value = a;
+            //tính tổng n số nguyên tố đầu tiên:
+            //document.getElementById("kq").value = tong;
+        }
+    </script>
+</body>
+
+</html>

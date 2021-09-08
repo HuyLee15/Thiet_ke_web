@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menu ul {
+            display: flex;
+            width: 666px;
+            height: 50px;
+            background-color: blue;
+            color: white !important;
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        .menu li {
+            line-height: 50px;
+            padding: 0 30px;
+            border-left: 1px solid white;
+            position: relative;
+        }
+        
+        .menu li ul {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: -172px;
+            width: 450px;
+            background-color: red;
+        }
+        
+        .menu li:hover {
+            background-color: red;
+        }
+        
+        .menu li:hover ul {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>Chính trị - xã hội</li>
+            <li>Thế Giới
+                <ul>
+                    <li>Thư viện pháp luật</li>
+                    <li>Sống khỏe</li>
+                    <li>Pháp Luật</li>
+                </ul>
+            </li>
+            <li>Nhịp sống trẻ</li>
+            <li>Giáo dục</li>
+            <li>Kinh tế</li>
+        </ul>
+    </div>
+</body>
+
+</html>
